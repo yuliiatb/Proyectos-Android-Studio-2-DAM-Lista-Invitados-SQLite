@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:backgroundTint="@color/purple">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            app:title="Reto 2. Yuliia Teterko Bobrytska"
+            app:titleCentered="true"
+            app:titleTextColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chopin_script"
+            android:shadowColor="@color/teal"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:text="Lista de invitados"
+            android:textColor="@color/pink"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/insertName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.767" />
+
+        <EditText
+            android:id="@+id/insertName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Escribe un nombre"
+            android:textColor="@color/teal"
+            android:textColorHint="@color/lilac"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.264" />
+
+        <Button
+            android:id="@+id/btnAnadir"
+            android:layout_width="175dp"
+            android:layout_height="53dp"
+            android:backgroundTint="@color/teal"
+            android:text="Añadir"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/insertName"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="@+id/insertName"
+            app:layout_constraintTop_toBottomOf="@+id/insertName"
+            app:layout_constraintVertical_bias="0.079" />
+
+        <Button
+            android:id="@+id/btnLimpiar"
+            android:layout_width="54dp"
+            android:layout_height="44dp"
+            android:backgroundTint="@color/lilac"
+            android:text="X"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.897"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.263" />
+
+        <Button
+            android:id="@+id/btnMostrarTodo"
+            android:layout_width="183dp"
+            android:layout_height="57dp"
+            android:backgroundTint="@color/purple"
+            android:text="Mostrar todos los nombres"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.888" />
+
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="183dp"
+            android:layout_height="57dp"
+            android:backgroundTint="@color/teal"
+            android:text="Editar la lista"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.975" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/pink"
+        android:src="@drawable/bin_icon"
+        />
+
+    <TextView
+        android:id="@+id/textoMostrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chopin_script"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:gravity="start"
+        android:paddingStart="50dp"
+        android:paddingEnd="70dp"
+        android:paddingTop="340dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
